@@ -9,7 +9,6 @@ This project is created for my learning and practice.
 - Read/View All Users
 - Update User Details
 - Delete Users
-- Beautiful UI using **Tailwind CSS**
 
 ## 🛠️ Tech Stack
 
