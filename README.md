@@ -18,3 +18,5 @@ This project is created for my learning and practice.
 - EJS Templating Engine
 - Tailwind CSS
 
+[![Live Demo](https://img.shields.io/badge/View-Live--App-blue?style=for-the-badge)](https://user-crud-app-z6z2.onrender.com)
+
