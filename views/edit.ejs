@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title><%= title %></title>
-  <link rel="stylesheet" href="/stylesheets/style.css" />
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Google Fonts: Poppins -->
@@ -15,53 +14,57 @@
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-zinc-900 to-zinc-800 min-h-screen flex flex-col">
+<body class="bg-gradient-to-br from-gray-900 via-zinc-900 to-gray-800 min-h-screen flex flex-col">
 
   <!-- Top Navbar / Link -->
   <div class="w-full flex justify-start px-6 py-4">
-    <a href="/read" class="text-blue-400 text-sm hover:underline hover:text-blue-300 transition">
-      &rarr; View Users
+    <a href="/read" class="text-blue-400 text-sm font-medium hover:underline hover:text-blue-300 transition">
+      &larr; View All Users
     </a>
   </div>
 
   <!-- Form Section -->
   <div class="flex-grow flex items-center justify-center px-4 pb-10">
-    <div class="backdrop-blur-lg bg-zinc-800/10 border border-gray-600 rounded-2xl p-8 w-full max-w-md shadow-lg hover:shadow-2xl transition duration-300">
-      <form action="/update/<%= user._id %>" method="POST" class="flex flex-col gap-5">
-        <h1 class="text-3xl font-bold text-white text-center">Update User</h1>
+    <div class="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-8 w-full max-w-md shadow-xl hover:shadow-blue-500/20 transition duration-300">
+      <form action="/update/<%= user._id %>" method="POST" class="flex flex-col gap-6">
+        <h1 class="text-3xl font-extrabold text-center text-white mb-2">Update User</h1>
         
+        <!-- Full Name -->
         <input
-          class="bg-zinc-900/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           type="text"
-          placeholder="Full Name"
           name="name" 
           value="<%= user.name %>"
+          placeholder="Full Name"
           required
+          class="bg-zinc-800/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
         />
 
+        <!-- Email -->
         <input
-          class="bg-zinc-900/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           type="email"
-          placeholder="Email Address"
           name="email" 
           value="<%= user.email %>"
+          placeholder="Email Address"
           required
+          class="bg-zinc-800/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
         />
 
+        <!-- Profile Image URL -->
         <input
-          class="bg-zinc-900/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
           type="url"
-          placeholder="Profile Image URL"
           name="imageurl" 
           value="<%= user.imageurl %>"
+          placeholder="Profile Image URL"
           required
+          class="bg-zinc-800/40 border border-gray-600 text-white placeholder-gray-400 rounded-lg px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
         />
 
+        <!-- Submit Button -->
         <button
-          class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition duration-300"
           type="submit"
+          class="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 rounded-lg transition duration-300 shadow-md hover:shadow-green-500/30"
         >
-          Update User
+            Update User
         </button>
       </form>
     </div>
